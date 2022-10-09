@@ -40,7 +40,7 @@ const Articles: CollectionConfig = {
       type: "upload",
       label: "Imagen destacada",
       relationTo: "imagenes",
-      unique: true,
+      // unique: true,
       required: true,
     },
     {
@@ -52,10 +52,14 @@ const Articles: CollectionConfig = {
     {
       name: "themes",
       type: "relationship",
-      relationTo: "themes",
       label: "Tema del artículo",
+      relationTo: "themes",
+      hasMany: false,
       admin: {
         position: "sidebar",
+        style: {
+          marginTop: "30px",
+        },
       },
     },
     {
@@ -65,7 +69,9 @@ const Articles: CollectionConfig = {
       maxLength: 180,
       admin: {
         position: "sidebar",
-        description: "Máximo 180 caracteres",
+        description: ({ value }) => {
+          return value?.length + " / 180 caracteres.";
+        },
       },
     },
     {
@@ -75,7 +81,7 @@ const Articles: CollectionConfig = {
       admin: {
         position: "sidebar",
         description:
-          "Dejar en blanco para generarlo automáticamente al guardar",
+          "Dejar en blanco para que se genere automáticamente al guardar",
       },
       hooks: {
         beforeValidate: [formatSlug("title")],

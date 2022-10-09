@@ -43,10 +43,13 @@ const Videos: CollectionConfig = {
       required: true,
     },
     {
-      name: "videoLink",
+      name: "videoID",
       type: "text",
-      label: "Link del video",
+      label: "ID del video",
       required: true,
+      admin: {
+        description: "Ej: qJWkqM9npM (valor del video de YouTube)",
+      },
     },
     {
       name: "description",

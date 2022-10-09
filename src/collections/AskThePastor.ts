@@ -29,7 +29,6 @@ const AskThePastor: CollectionConfig = {
       type: "upload",
       label: "Imagen destacada",
       relationTo: "imagenes",
-      //   unique: true,
       required: true,
     },
     {
@@ -55,17 +54,8 @@ const AskThePastor: CollectionConfig = {
       name: "num",
       label: "Número",
       type: "number",
-      unique: true,
       admin: {
         position: "sidebar",
-        readOnly: true,
-      },
-      hooks: {
-        beforeChange: [
-          (args) => {
-            return (args.data.num = 222);
-          },
-        ],
       },
     },
   ],
