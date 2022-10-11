@@ -1,16 +1,16 @@
 import { buildConfig } from "payload/config";
 import path from "path";
 
-import Articles from "./collections/Articles";
-import Themes from "./collections/Themes";
+import Articles from "./src/collections/Articles";
+import Themes from "./src/collections/Themes";
 
-import AskThePastor from "./collections/AskThePastor";
+import AskThePastor from "./src/collections/AskThePastor";
 
-import Media from "./collections/Media";
-import Users from "./collections/Users";
-import Series from "./collections/Series";
-import Videos from "./collections/Videos";
-import Authors from "./collections/Authors";
+import Media from "./src/collections/Media";
+import Users from "./src/collections/Users";
+import Series from "./src/collections/Series";
+import Videos from "./src/collections/Videos";
+import Authors from "./src/collections/Authors";
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_BASE_DNS,
@@ -41,5 +41,5 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, "generated-schema.graphql"),
   },
-  cors: ["http://localhost:3000"],
+  cors: ["http://localhost:3000", "http://localhost:3001"],
 });
