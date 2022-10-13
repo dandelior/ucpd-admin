@@ -30,6 +30,11 @@ export default buildConfig({
     Media,
     Users,
   ],
+  upload: {
+    limits: {
+      fileSize: 15000000,
+},
+  },
   localization: {
     locales: ["en", "es"],
     defaultLocale: "es",
