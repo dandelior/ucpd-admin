@@ -33,7 +33,7 @@ export default buildConfig({
   upload: {
     limits: {
       fileSize: 15000000,
-},
+    },
   },
   localization: {
     locales: ["en", "es"],
@@ -46,5 +46,10 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, "generated-schema.graphql"),
   },
-  cors: ["http://localhost:3000", "http://localhost:3001"],
+  cors: [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://uncorazonparadios.com",
+    "https://beta.uncorazonparadios.com",
+  ],
 });
