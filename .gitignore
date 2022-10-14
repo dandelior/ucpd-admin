@@ -168,3 +168,4 @@ dist
 src/media
 src/server.ts
 build/
+src/server.ts
