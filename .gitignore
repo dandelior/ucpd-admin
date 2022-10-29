@@ -166,5 +166,6 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
 
 src/media
+media
 src/server.ts
 build/

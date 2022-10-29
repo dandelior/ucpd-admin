@@ -1,5 +1,8 @@
 import { CollectionConfig } from "payload/types";
 import formatSlug from "../utilities/formatSlug";
+import RichTexto from "../components/RichText";
+import Content from "../blocks/Content";
+import blockquote from "../fields/elements/blockquote";
 
 const Articles: CollectionConfig = {
   slug: "articles",
@@ -40,7 +43,6 @@ const Articles: CollectionConfig = {
       type: "upload",
       label: "Imagen destacada",
       relationTo: "imagenes",
-      // unique: true,
       required: true,
     },
     {
@@ -48,6 +50,9 @@ const Articles: CollectionConfig = {
       type: "richText",
       label: "Contenido",
       required: true,
+      admin: {
+        elements: ["h2", "h3", "h4", blockquote, "link", "ol", "ul", "upload"],
+      },
     },
     {
       name: "themes",

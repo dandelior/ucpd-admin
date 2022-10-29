@@ -14,20 +14,26 @@ const Media: CollectionConfig = {
     staticDir: "media",
     imageSizes: [
       {
+        name: "og",
+        width: 952,
+        height: 500,
+        crop: "centre",
+      },
+      {
         name: "thumbnail",
-        width: 400,
-        height: 300,
+        width: 640,
+        height: null,
         crop: "centre",
       },
       {
         name: "card",
-        width: 768,
-        height: 1024,
+        width: 1024,
+        height: null,
         crop: "centre",
       },
       {
         name: "tablet",
-        width: 1024,
+        width: 1920,
         height: null,
         crop: "centre",
       },
