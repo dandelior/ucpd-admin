@@ -167,6 +167,4 @@ dist
 
 src/media
 media
-src/server.ts
 build/
-src/server.ts
