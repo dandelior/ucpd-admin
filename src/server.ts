@@ -1,9 +1,7 @@
 import express from "express";
 import payload from "payload";
 
-require("dotenv").config({
-  path: path.resolve(__dirname, "../.env"),
-});
+require("dotenv").config();
 
 const app = express();
 
@@ -24,4 +22,4 @@ payload.init({
 
 // Add your own express routes here
 
-app.listen(3000);
+app.listen(3010);
