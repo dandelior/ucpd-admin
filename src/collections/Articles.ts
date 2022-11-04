@@ -71,11 +71,15 @@ const Articles: CollectionConfig = {
       name: "description",
       type: "textarea",
       label: "Descripción",
-      maxLength: 180,
+      maxLength: 220,
       admin: {
         position: "sidebar",
         description: ({ value }) => {
-          return value?.length + " / 180 caracteres.";
+          const desc =
+            value?.length !== undefined
+              ? value.length + " / 220 caracteres."
+              : "0 / 220 caracteres.";
+          return desc;
         },
       },
     },
