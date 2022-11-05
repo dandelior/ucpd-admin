@@ -4,3 +4,12 @@
   font-size: base(0.8);
   margin-bottom: base(0.5);
 }
+
+.fill {
+  fill: black;
+}
+@media (prefers-color-scheme: dark) {
+  .fill {
+    fill: white;
+  }
+}
